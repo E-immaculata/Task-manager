@@ -3,7 +3,6 @@ const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");
 const taskCount = document.getElementById("taskCount");
 
-// Initialize tasks from storage or empty array
 let tasks = JSON.parse(localStorage.getItem("myTasks")) || [];
 
 function updateUI() {
