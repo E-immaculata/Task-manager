@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taskly | Managed Tasks</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <div class="user-profile">
+          <div class="avatar">C</div>
+          <div class="welcome">
+            <span>Welcome back,</span>
+            <p>Immaculata</p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="task-input-card">
+          <h2>Create New Task</h2>
+          <div class="input-group">
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="What is your next goal?"
+            />
+            <button id="addBtn">Add Task</button>
+          </div>
+        </section>
+
+        <section class="list-section">
+          <div class="list-header">
+            <h3>My Daily Tasks</h3>
+            <span id="taskCount">0 tasks left</span>
+          </div>
+          <ul id="taskList"></ul>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

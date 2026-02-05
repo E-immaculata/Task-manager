@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --primary: #4f8f6a;          
+  --secondary: #f4f7f2;        
+  --accent: #e9b949;           
+  --bg-color: #f6f8f5;
+  --card-bg: #ffffff;
+  --text-main: #1f2933;
+  --text-sub: #6b7280;
+  --completed: #16a34a;
+}
+
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-color);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--text-main);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin: 20px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  position: relative;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  background: linear-gradient(to right, #f4f7f2, #ffffff);
+  border-radius: 30px;
+}
+
+.box-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.box-1 span {
+  font-family: "Roboto";
+  font-size: 1.3rem;
+  color: var(--text-sub);
+}
+
+.box-1 h1 {
+  font-family: "Pacifico";
+  font-size: 2.6rem;
+  color: var(--primary);
+}
+
+.box-1 p {
+  font-family: "Roboto";
+  color: var(--text-sub);
+}
+
+.box-2 {
+  position: relative;
+}
+
+.main-img {
+  height: 25rem;
+  width: 25rem;
+  position: relative;
+  z-index: 5;
+}
+
+.circle {
+  height: 15rem;
+  width: 12rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), #a7d7b5);
+  position: absolute;
+  opacity: 0.25;
+  top: -120px;
+  left: -80px;
+}
+
+/* ================= ABOUT & MISSION ================= */
+.about-section,
+.mission-section {
+  background: var(--card-bg);
+  padding: 60px;
+  margin: 60px auto;
+  max-width: 1200px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-section h1,
+.mission-section h1 {
+  font-size: 2rem;
+  color: var(--text-main);
+}
+
+.about-section p,
+.mission-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-sub);
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* ================= GALLERY ================= */
+.fashion-container,
+.child-labour,
+.poem {
+  column-count: 3;
+  column-gap: 20px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 900px) {
+  .fashion-container,
+  .child-labour,
+  .poem {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .fashion-container,
+  .child-labour,
+  .poem {
+    column-count: 1;
+  }
+}
+
+.gallery-item,
+.square {
+  width: 100%;
+  margin-bottom: 20px;
+  break-inside: avoid;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.gallery-item img,
+.square img {
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 14px;
+  font-size: 13px;
+  color: white;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+}
+
+/* ================= CONTACT ================= */
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 60px 10%;
+}
+
+.contact-card {
+  background: linear-gradient(to bottom right, #ffffff, #f4f7f2);
+  padding: 35px;
+  width: 450px;
+  border-radius: 22px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+}
+
+.contact-card h3 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 7px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--primary), #3f7d5f);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(79,143,106,0.3);
+}
+
+/* ================= TASK APP ================= */
+.app-container {
+  max-width: 480px;
+  padding: 24px;
+}
+
+.task-input-card,
+.task-item {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.task-item {
+  border-left: 5px solid var(--primary);
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-item.done {
+  background: #eef6f1;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+button#addBtn {
+  background: linear-gradient(135deg, var(--primary), #3f7d5f);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* ================= WHATSAPP FLOAT ================= */
+.whatsapp {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  filter: drop-shadow(0 10px 20px rgba(79,143,106,0.4));
+}
